@@ -1,0 +1,141 @@
+html.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 100%;
+}
+
+body.bg-darkBg {
+    background-color: #07090e;
+    color: #e2e8f0;
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 125%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+      html.scroll-smooth {
+        scroll-behavior: auto;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e2638;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+}
+
+/* Neon Glow Effects */
+.glow-purple {
+    box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.3);
+}
+
+.glow-purple-lg {
+    box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.25);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.bg-gradient-btn:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+/* Reveal animation styles */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+}
+
+.background-grid {
+    background-image: radial-gradient(#3b82f6 0.75px, transparent 0.75px);
+    background-size: 24px 24px;
+}
+
+#home,
+#about,
+#skills,
+#projects,
+#contact {
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+}
+
+#home > .max-w-7xl,
+#about > .max-w-7xl,
+#skills > .max-w-7xl,
+#projects > .max-w-7xl,
+#contact > .max-w-7xl {
+    width: 100%;
+}
+
+.hero-portrait {
+    width: min(18rem, calc(100vw - 3rem));
+    height: auto;
+    aspect-ratio: 1;
+}
+
+.hero-code-card {
+    width: min(20rem, calc(100vw - 3rem));
+}
+
+section[id] {
+    scroll-margin-top: 5rem;
+}
+
+@media (min-width: 640px) {
+    .hero-portrait {
+        width: 24rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.active {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .progress-bar {
+        transition: none;
+    }
+}

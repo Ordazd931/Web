@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Ordaz | Ingeniero en Sistemas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-darkBg text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+
+    <!-- Background Decoration Grid -->
+    <div class="background-grid fixed inset-0 pointer-events-none z-0 opacity-20"></div>
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-md border-b border-darkBorder/60 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-2 text-xl font-bold tracking-tight group">
+                <span class="text-indigo-500 group-hover:rotate-12 transition-transform duration-300">&lt;/&gt;</span>
+                <span class="text-white font-semibold">Ing. Diego Ordaz</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="text-indigo-400 transition-colors">Inicio</a>
+                <a href="#about" class="text-slate-400 hover:text-white transition-colors">Sobre mí</a>
+                <a href="#skills" class="text-slate-400 hover:text-white transition-colors">Habilidades</a>
+                <a href="#projects" class="text-slate-400 hover:text-white transition-colors">Proyectos</a>
+                <a href="#contact" class="text-slate-400 hover:text-white transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden lg:flex items-center">
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-indigo-600/30 transition-all duration-300 flex items-center gap-2 hover:scale-105 active:scale-95">
+                    Contrátame <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" type="button" class="lg:hidden text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-darkCard/95 border-b border-darkBorder px-6 py-6 space-y-4 backdrop-blur-lg">
+            <a href="#home" class="block text-indigo-400 font-medium mobile-link">Inicio</a>
+            <a href="#about" class="block text-slate-300 hover:text-indigo-400 font-medium mobile-link">Sobre mí</a>
+            <a href="#skills" class="block text-slate-300 hover:text-indigo-400 font-medium mobile-link">Habilidades</a>
+            <a href="#projects" class="block text-slate-300 hover:text-indigo-400 font-medium mobile-link">Proyectos</a>
+            <a href="#contact" class="block text-slate-300 hover:text-indigo-400 font-medium mobile-link">Contacto</a>
+            <a href="#contact" class="block text-center bg-indigo-600 text-white font-medium text-sm py-2.5 rounded-lg w-full mt-4 mobile-link">
+                Contrátame ↗
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Glow Orbs -->
+        <div class="absolute top-1/4 right-10 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- Left Column: Hero Text Content -->
+            <div class="lg:col-span-7 space-y-6 reveal">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-indigo-950/60 border border-indigo-500/30 text-indigo-400 text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+                    INGENIERO EN SISTEMAS · DESARROLLO WEB
+                </div>
+
+                <!-- Headline -->
+                <div class="space-y-2">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Hola, Soy <span class="text-gradient">Diego</span>
+                    </h1>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-slate-200 tracking-tight">
+                        Ing. en Sistemas.
+                    </h2>
+                </div>
+
+                <!-- Subtext -->
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    Soy un desarrollador web apasionado, especializado en crear experiencias digitales excepcionales mediante tecnologías modernas.
+                </p>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm px-6 py-3.5 rounded-lg shadow-lg shadow-indigo-600/30 transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5">
+                        Ver mis proyectos <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#about" class="bg-darkCard hover:bg-slate-800 text-slate-200 border border-darkBorder font-semibold text-sm px-6 py-3.5 rounded-lg transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5">
+                        Conoce mi perfil <i data-lucide="user-round" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Technologies Icons Stack -->
+                <div class="pt-8 space-y-3">
+                    <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Tecnologías con las que trabajo</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-500 font-bold text-xs hover:scale-110 transition-transform cursor-pointer">HTML5</div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-500 font-bold text-xs hover:scale-110 transition-transform cursor-pointer">CSS3</div>
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-400 font-bold text-xs hover:scale-110 transition-transform cursor-pointer">JS</div>
+                        <div class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-blue-400 font-bold text-xs hover:scale-110 transition-transform cursor-pointer">TS</div>
+                        <div class="w-10 h-10 rounded-lg bg-slate-500/10 border border-slate-500/20 flex items-center justify-center text-slate-300 hover:scale-110 transition-transform" role="img" aria-label="GitHub" title="GitHub">
+                            <svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.628-5.479 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Portrait & Interactive Code Card Overlay -->
+            <div class="lg:col-span-5 relative flex justify-center items-center reveal">
+                <!-- Glowing Circle Ambient Background -->
+                <div class="hero-portrait w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 p-1 glow-purple-lg">
+                    <div class="w-full h-full bg-darkBg rounded-full overflow-hidden relative">
+                        <img src="assets/Ing pc.png"
+                             alt="Diego Ordaz trabajando frente a una computadora"
+                             class="w-full h-full object-cover transition-all duration-700"
+                             fetchpriority="high">
+                    </div>
+                </div>
+
+                <!-- Floating Code Card Overlay -->
+                <div class="hero-code-card absolute -bottom-6 -right-2 sm:right-0 bg-darkCard/90 backdrop-blur-xl border border-darkBorder p-4 rounded-xl shadow-2xl max-w-xs font-mono text-xs text-slate-300 animate-float">
+                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-darkBorder/60">
+                        <span class="text-slate-400 text-[10px] flex items-center gap-1">
+                            <i data-lucide="code" class="w-3 h-3 text-indigo-400"></i> Code
+                        </span>
+                        <div class="flex space-x-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                        </div>
+                    </div>
+                    <p class="text-purple-400">const <span class="text-indigo-300">developer</span> = {</p>
+                    <p class="pl-4 text-slate-300">name: <span class="text-emerald-400">"Diego"</span>,</p>
+                    <p class="pl-4 text-slate-300">skills: [<span class="text-emerald-400">"HTML"</span>, <span class="text-emerald-400">"CSS"</span>,</p>
+                    <p class="pl-8 text-emerald-400">"JavaScript", "React"</p>
+                    <p class="pl-4 text-slate-300">],</p>
+                    <p class="pl-4 text-slate-300">passion: <span class="text-emerald-400">"Crear apps web y todo lo relacionado con tecnología"</span></p>
+                    <p class="text-purple-400">};</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-24 bg-darkBg relative border-t border-darkBorder/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Narrative -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">SOBRE MÍ</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                        Creo en la tecnología como solución
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Soy ingeniero en sistemas junior y me interesa el desarrollo web, la administración de bases de datos y la resolución de problemas técnicos. Me enfoco en aprender y crear soluciones claras, funcionales y mantenibles.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 border border-darkBorder bg-darkCard hover:bg-slate-800 text-white font-medium text-sm px-5 py-2.5 rounded-lg transition-all duration-300">
+                        Contáctame <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i>
+                    </a>
+                </div>
+
+                <!-- Right Grid Stats (2x2 Grid with Glow Borders) -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
+                    <!-- Stat Card 1 -->
+                    <div class="p-6 bg-darkCard border border-darkBorder/80 rounded-xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-1">Desarrollo web</h3>
+                        <p class="text-slate-400 text-sm font-medium">Interfaces y sitios responsivos</p>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="p-6 bg-darkCard border border-darkBorder/80 rounded-xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i data-lucide="code" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-1">Bases de datos</h3>
+                        <p class="text-slate-400 text-sm font-medium">Organización y consultas</p>
+                    </div>
+
+                    <!-- Stat Card 3 -->
+                    <div class="p-6 bg-darkCard border border-darkBorder/80 rounded-xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i data-lucide="smile" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-1">Resolución</h3>
+                        <p class="text-slate-400 text-sm font-medium">Análisis de problemas técnicos</p>
+                    </div>
+
+                    <!-- Stat Card 4 -->
+                    <div class="p-6 bg-darkCard border border-darkBorder/80 rounded-xl hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i data-lucide="trophy" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white mb-1">Aprendizaje</h3>
+                        <p class="text-slate-400 text-sm font-medium">Mejora continua en tecnología</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MY SKILLS SECTION -->
+    <section id="skills" class="py-24 bg-darkBg relative border-t border-darkBorder/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2 reveal">
+                <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">HABILIDADES</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Tecnologías y herramientas</h2>
+            </div>
+
+            <!-- Skills Progress Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+                
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <span class="p-1 rounded bg-orange-500/10 text-orange-500 text-xs font-bold">HTML</span> HTML
+                            </span>
+                            <span class="text-slate-400">90%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <span class="p-1 rounded bg-blue-500/10 text-blue-500 text-xs font-bold">CSS</span> CSS
+                            </span>
+                            <span class="text-slate-400">90%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <span class="p-1 rounded bg-yellow-500/10 text-yellow-400 text-xs font-bold">JS</span> JavaScript
+                            </span>
+                            <span class="text-slate-400">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <i data-lucide="atom" class="w-4 h-4 text-cyan-400"></i> React.js
+                            </span>
+                            <span class="text-slate-400">75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <i data-lucide="triangle" class="w-4 h-4 text-white"></i> Next.js
+                            </span>
+                            <span class="text-slate-400">75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <span class="p-1 rounded bg-blue-600/10 text-blue-400 text-xs font-bold">TS</span> TypeScript
+                            </span>
+                            <span class="text-slate-400">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="space-y-6">
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <i data-lucide="server" class="w-4 h-4 text-green-500"></i> Node.js
+                            </span>
+                            <span class="text-slate-400">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <i data-lucide="wind" class="w-4 h-4 text-teal-400"></i> Tailwind CSS
+                            </span>
+                            <span class="text-slate-400">70%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-white flex items-center gap-2">
+                                <svg aria-hidden="true" class="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.628-5.479 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                                GitHub
+                            </span>
+                            <span class="text-slate-400">75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-darkCard rounded-full overflow-hidden border border-darkBorder">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-24 bg-darkBg relative border-t border-darkBorder/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2 reveal">
+                <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">PROYECTOS</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Proyectos y práctica</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-darkCard border border-darkBorder/80 rounded-2xl p-8 sm:p-12 text-center reveal">
+                <i data-lucide="folder-code" class="w-10 h-10 text-indigo-400 mx-auto mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Estoy preparando mis proyectos</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Pronto compartiré aquí trabajos propios con una descripción de sus objetivos, tecnologías y código fuente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-darkBg relative border-t border-darkBorder/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch reveal">
+                
+                <!-- CTA Box: Let's Work Together -->
+                <div class="lg:col-span-5 bg-darkCard border border-darkBorder p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">CONTACTO</span>
+                        <h2 class="text-3xl font-bold text-white">¿Tienes una idea o propuesta?</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Me interesa conversar sobre oportunidades, proyectos y soluciones tecnológicas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Contact details -->
+                <div class="lg:col-span-4 bg-darkCard border border-darkBorder p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest">DATOS DE CONTACTO</span>
+                        <i data-lucide="contact-round" class="w-9 h-9 text-indigo-400 mt-5 mb-3"></i>
+                        <h3 class="text-white font-bold">Hablemos</h3>
+                        <div class="mt-4 space-y-3 text-sm">
+                            <a href="mailto:Ordaz432@gmail.com" class="flex items-center gap-2.5 text-slate-300 hover:text-indigo-400 transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4 text-indigo-400"></i>
+                                Ordaz432@gmail.com
+                            </a>
+                            <a href="https://wa.me/584249364537" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 text-slate-300 hover:text-indigo-400 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-indigo-400"></i>
+                                WhatsApp: +584249364537
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social profile placeholder -->
+                <div class="lg:col-span-3 bg-darkCard border border-darkBorder p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div>
+                        <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-4">REDES PROFESIONALES</span>
+                        <a href="https://www.linkedin.com/in/diego-ordaz-7b076b172/" target="_blank" rel="noopener noreferrer" aria-label="Visita mi perfil de LinkedIn" class="inline-flex items-center gap-3 text-slate-300 hover:text-indigo-400 transition-colors">
+                            <svg aria-hidden="true" class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-darkBg border-t border-darkBorder/60 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Diego Ordaz. Todos los derechos reservados.</p>
+            <p class="flex items-center gap-1">
+                Hecho con <i data-lucide="heart" class="w-3.5 h-3.5 text-red-500 fill-red-500"></i> por Diego
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenu.classList.toggle('hidden', isExpanded);
+            menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+            menuBtn.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                menuBtn.setAttribute('aria-label', 'Abrir menú');
+            });
+        });
+
+        // Reveal content and animate skill bars when they enter the viewport.
+        const revealElements = document.querySelectorAll('.reveal');
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if ('IntersectionObserver' in window && !prefersReducedMotion) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            const progressObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.dataset.width;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            revealElements.forEach(element => revealObserver.observe(element));
+            progressBars.forEach(bar => progressObserver.observe(bar));
+        } else {
+            revealElements.forEach(element => element.classList.add('active'));
+            progressBars.forEach(bar => {
+                bar.style.width = bar.dataset.width;
+            });
+        }
+
+        // Navbar Shadow on Scroll
+        const navbar = document.getElementById('navbar');
+        const updateNavbar = () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-xl', 'bg-darkBg/95');
+            } else {
+                navbar.classList.remove('shadow-xl', 'bg-darkBg/95');
+            }
+        };
+
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+        updateNavbar();
+    </script>
+</body>
+</html>
